@@ -1,0 +1,165 @@
+/*this block styles height of page in window and default font   */
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "Courier New";
+
+}
+
+/*this block sets background image and handles to have no repeated full centered background*/
+body {
+    background-image: url("../img/background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*this block styles center rectangle and initializes first animation */
+#base {
+    margin: 5%;
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    position: relative;
+    animation-name: baseAnimation;
+    animation-duration: 2s;
+}
+
+/*this block makes animation of center rectangle*/
+@keyframes baseAnimation {
+    0% {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    25% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    75% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+/*this block determines location of header in grid pane and its font weight*/
+#header {
+    grid-area: header;
+    font-weight: bold;
+}
+/*this block sets reaction of save button on hover*/
+#save:hover {
+    background-color: dodgerblue;
+}
+
+/*this block determines location of left form in grid pane */
+
+#left-form {
+    grid-area: left;
+}
+/*this block sets reaction of left form on hover*/
+#left-form:hover {
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+/*this block determines location of right form in grid pane */
+#right-form {
+    grid-area: right;
+}
+/*this block sets reaction of right form on hover*/
+#right-form:hover {
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+/*this block determines location of footer in grid pane */
+
+#footer {
+    grid-area: footer;
+}
+
+/*this block sets center rectangles display mode to grid and initialize its structure*/
+#body-grid-container {
+    display: grid;
+    grid-template-areas: 'header header' 'left right' 'left right' 'left right' 'footer footer';
+    grid-gap: 10px;
+    padding: 10px;
+
+}
+/*this block styles each part of grid pane and its background color*/
+#body-grid-container > div {
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-radius: 10px;
+
+}
+/*this block styles labels of text areas and check boxes*/
+label {
+    text-align: left;
+    font-size: 50%;
+}
+/*this block sets headers texts size and font*/
+.header_part {
+    font-family: "Garamond";
+    font-size: 150%;
+
+}
+/*this block sets color and font of alerts that are visible on forms validation*/
+#name-alert, #gender_alert {
+    color: red;
+    alignment: left;
+    font-size: 40%;
+    padding-right: 30%;
+}
+/*this block sets default style of all buttons */
+.button {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/*this block sets reaction of buttons on hover*/
+.button:hover {
+    padding: 5px 45px;
+    border-radius: 10px;
+}
+
+/*this block styles saved answer in text area*/
+#saved_answer {
+    font-weight: bold;
+    text-align: center;
+}
+/*this block sets font and color of text area*/
+.text_area {
+    font-family: "Courier New";
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+
+}
+/*this block sets reaction of save button on hover*/
+#save:hover {
+    background-color: dodgerblue;
+}
+/*this block sets reaction of cancel button on hover*/
+#cancel:hover {
+    background-color: crimson;
+}
+/*this block sets reaction of submit button on hover*/
+#submit:hover {
+    background-color: forestgreen;
+}
+/*this block sets color of accuracy label on prediction */
+#response_accuracy {
+    color: crimson;
+}
+/*this block sets color of gender label on prediction */
+#response_gender {
+    color: darkblue;
+}
