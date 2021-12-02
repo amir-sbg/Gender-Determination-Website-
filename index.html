@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gender determination</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="base">
+    <div id="body-grid-container">
+        <div class="header_part" id="header">IE - Midterm Project - Gender determination</div>
+        <div id="left-form">
+           <p class="header_part"> Mr. or Ms. ?</p>
+            <form>
+                <label for="name">Name:</label>
+                <input class="text_area" type="text" id="name" name="name" value=""><br>
+                <label id="name-alert"></label><br>
+
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="male">
+
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="female"><br>
+                <label id="gender_alert"></label><br>
+
+                <input class="button" id="submit" type="submit" value="Submit">
+                <input class="button" id="save" type="submit" value="Save">
+            </form>
+
+        </div>
+        <div id="right-form">
+            <p class="header_part">Prediction</p>
+            <form>
+                <label id="response_gender">Gender</label><br>
+                <label id="response_accuracy">Probability</label><br>
+
+                <textarea class="text_area" id="saved_answer" name="saved_answer" readonly="true" rows="4" cols="70"> Saved Answer</textarea><br>
+                <label id="saved_alert"></label>
+
+                <input class="button" id="cancel"  type="submit" value="Cancel">
+
+            </form>
+
+
+        </div>
+        <div id="footer"></div>
+
+    </div>
+</div>
+<script src="js/app.js"></script>
+
+</body>
+</html>
